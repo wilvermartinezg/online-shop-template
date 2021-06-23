@@ -1,1 +1,67 @@
-<p>login works!</p>
+<app-main-layout>
+  <ng-template appMainLayoutContent>
+    <div fxLayout="row" fxLayoutAlign="center center">
+      <mat-card class="login-mat-card">
+        <div fxLayout="column">
+
+          <div class="logo-container" fxLayout="row" fxLayoutAlign="center center">
+            <img src="assets/images/logos/logo2.png"/>
+          </div>
+
+          <form name="loginForm" [formGroup]="loginForm" novalidate>
+
+            <div fxLayout="row" fxLayoutAlign="center center">
+              <h3>Bienvenido, por favor ingresa a tu cuenta de usuario.</h3>
+            </div>
+
+            <mat-form-field appearance="outline" class="width-100-percent">
+              <mat-label>Correo electronico</mat-label>
+              <input matInput formControlName="email" type="text">
+              <mat-icon matSuffix class="secondary-text">mail</mat-icon>
+              <mat-error>
+                Email es requerido
+              </mat-error>
+            </mat-form-field>
+
+            <mat-form-field appearance="outline" class="width-100-percent">
+              <mat-label>Password</mat-label>
+              <input matInput
+                     formControlName="password"
+                     [type]="ocultarPassword ? 'password' : 'text'"
+                     (keyup.enter)="login()">
+              <mat-icon matSuffix
+                        class="secondary-text show-password-icon"
+                        (click)="ocultarPassword = !ocultarPassword">
+                {{ocultarPassword ? 'visibility_off' : 'visibility'}}
+              </mat-icon>
+              <mat-error>
+                Password es requerido
+              </mat-error>
+            </mat-form-field>
+
+          </form>
+
+          <div fxLayout="row" fxLayoutAlign="center center">
+            <button mat-raised-button
+                    color="primary"
+                    [disabled]="loginForm.invalid"
+                    (click)="login()"
+                    class="login-button">
+              Ingresar
+            </button>
+          </div>
+
+          <div fxLayout="row" fxLayoutAlign="center center">
+            <h3>¿No tienes una cuenta?</h3>
+          </div>
+
+          <div fxLayout="row" fxLayoutAlign="center center">
+            <button mat-raised-button class="login-button" [routerLink]="'/register'">Crear una cuenta</button>
+          </div>
+
+        </div>
+      </mat-card>
+
+    </div>
+  </ng-template>
+</app-main-layout>

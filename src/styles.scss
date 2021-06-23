@@ -2,3 +2,59 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.snackbar-success {
+  color: #fafafa;
+  background: #558b2f;
+}
+
+.snackbar-error {
+  color: #fafafa;
+  background: #f44336;
+}
+
+.width-100-percent {
+  width: 100%;
+}
+
+.mat-dialog-without-padding {
+  .mat-dialog-container {
+    padding: 0;
+    overflow: hidden;
+    position: relative;
+
+    .mat-dialog-title {
+      padding-left: 10px;
+      padding-right: 10px;
+      margin: 0;
+      min-height: 46px;
+    }
+
+    .mat-dialog-content {
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      margin: 0;
+      position: relative;
+      max-height: none;
+    }
+
+    .mat-dialog-actions {
+      padding-left: 10px;
+      padding-right: 10px;
+      margin: 0;
+      position: relative;
+    }
+  }
+}
+
+.mat-list-item {
+  .mat-line {
+    color: #757575;
+  }
+
+  .mat-list-icon {
+    color: #616161;
+  }
+}

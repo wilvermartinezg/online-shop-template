@@ -1,0 +1,9 @@
+<ng-template [ngIf]="templateToolbar">
+  <ng-template [cdkPortalOutlet]="templateToolbar"></ng-template>
+</ng-template>
+
+<div fxFlex fxLayout="column" class="main-layout-container">
+  <ng-template [ngIf]="templateContent">
+    <ng-template [cdkPortalOutlet]="templateContent"></ng-template>
+  </ng-template>
+</div>

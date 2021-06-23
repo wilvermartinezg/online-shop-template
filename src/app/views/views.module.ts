@@ -18,5 +18,5 @@ const lazyRoutes: Routes = [
     RouterModule.forChild(lazyRoutes)
   ]
 })
-export class ViewsModuleModule {
+export class ViewsModule {
 }
