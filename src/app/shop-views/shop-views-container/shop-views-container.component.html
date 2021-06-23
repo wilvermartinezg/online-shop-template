@@ -1,0 +1,28 @@
+<app-main-layout>
+  <ng-template appMainLayoutToolbar>
+    <app-shop-toolbar [showProfileMenu]="isLogged" [showLoginButton]="!isLogged"></app-shop-toolbar>
+  </ng-template>
+
+  <ng-template appMainLayoutContent>
+    <mat-drawer-container class="main-mat-drawer-container" autosize="true">
+      <mat-drawer #mainMatDrawer [mode]="'side'" opened>
+        <mat-nav-list>
+          <h3 mat-subheader>Categorías</h3>
+
+          <mat-list-item (click)="goToCategory(0)">
+            <h4 mat-line>Todos los productos</h4>
+          </mat-list-item>
+
+          <mat-list-item *ngFor="let category of categoryList"
+                         (click)="goToCategory(category.id)">
+            <h4 mat-line>{{category.categoryName}}</h4>
+          </mat-list-item>
+
+        </mat-nav-list>
+      </mat-drawer>
+      <mat-drawer-content>
+        <router-outlet></router-outlet>
+      </mat-drawer-content>
+    </mat-drawer-container>
+  </ng-template>
+</app-main-layout>

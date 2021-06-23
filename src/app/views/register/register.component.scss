@@ -1,0 +1,23 @@
+:host {
+
+  .register-mat-card {
+    height: 600px;
+    width: 450px;
+
+    .logo-container {
+      margin-bottom: 15px;
+
+      img {
+        height: 50px;
+        width: auto;
+      }
+    }
+
+    .register-button {
+      width: 200px;
+      margin-bottom: 5px;
+    }
+
+  }
+
+}

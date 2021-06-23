@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule, Routes } from '@angular/router';
 import { ViewsModule } from './views/views.module';
+import { ShopViewsModule } from './shop-views/shop-views.module';
 
 const routes: Routes = [
   {
@@ -22,7 +23,8 @@ const routes: Routes = [
     BrowserModule,
     BrowserAnimationsModule,
     RouterModule.forRoot(routes, { useHash: true }),
-    ViewsModule
+    ViewsModule,
+    ShopViewsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

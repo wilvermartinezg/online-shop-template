@@ -14,3 +14,4 @@ Pueden descargarlo y modificarlo o adaptarlo a sus necesidades, no olviden dejar
 
 #### Modulo de registro:
 
+![LoginModule](https://drive.google.com/uc?id=1d0MLhRRJ716lzg_0s8MeyLt3BY3Lz4vQ)
